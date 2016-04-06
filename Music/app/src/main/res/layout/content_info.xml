@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.yandex.android.music.view.info.InfoActivity"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:showIn="@layout/activity_info">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/ivPhoto"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/tvGenres"
+        android:textColor="@color/colorGray"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ivPhoto" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/tvTracksAndAlbums"
+        android:paddingLeft="15dp"
+        android:textColor="@color/colorGray"
+        android:layout_below="@+id/tvGenres"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/biography"
+        android:id="@+id/textView3"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/tvTracksAndAlbums" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/tvDescription"
+            android:textColor="@android:color/black"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp" />
+    </ScrollView>
+
+</RelativeLayout>
